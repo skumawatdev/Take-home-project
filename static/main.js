@@ -1,5 +1,17 @@
 // Quiz data (questions are shuffled)
-const quizData = {{ quiz_data|tojson|safe }};
+const quizData = [
+  {
+    question: "What is the capital of France?",
+    options: ["New York", "London", "Paris", "Dublin"],
+    answer: "Paris"
+  },
+  {
+    question: "Who painted the Mona Lisa?",
+    options: ["Vincent Van Gogh", "Pablo Picasso", "Leonardo Da Vinci", "Claude Monet"],
+    answer: "Leonardo Da Vinci"
+  },
+  // Add more quiz questions here
+];
 
 // Personalized messages for the result
 const resultMessages = {
