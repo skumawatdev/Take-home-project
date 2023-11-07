@@ -1,42 +1,5 @@
 // Quiz data (questions are shuffled)
-const quizData = [
-  {
-    question: "What does DevSecOps primarily focus on?",
-    options: ["Development security", "DevOps processes", "Security collaboration", "Scalability"],
-    answer: "Development security",
-  },
-  {
-    question: "In DevSecOps, security is integrated into which phase of the software development lifecycle?",
-    options: ["Planning", "Coding", "Testing", "All of the above"],
-    answer: "All of the above",
-  },
-  {
-    question: "What is the goal of secure code analysis in DevSecOps?",
-    options: ["To identify and fix security vulnerabilities early", "To speed up development", "To improve user experience", "To reduce infrastructure costs"],
-    answer: "To identify and fix security vulnerabilities early",
-  },
-  {
-    question: "Which tool is used for scanning container images for security vulnerabilities?",
-    options: ["Clair", "Jenkins", "SonarQube", "OWASP ZAP"],
-    answer: "Clair",
-  },
-  {
-    question: "What is the practice of automatically identifying and responding to security incidents in DevSecOps?",
-    options: ["Security Automation", "Incident Response", "Security Monitoring", "Continuous Integration"],
-    answer: "Security Automation",
-  },
-  {
-    question: "What is the primary purpose of penetration testing in DevSecOps?",
-    options: ["To identify and fix security vulnerabilities", "To automate software deployments", "To monitor system performance", "To improve user experience"],
-    answer: "To identify and fix security vulnerabilities",
-  },
-  {
-    question: "Which DevSecOps principle emphasizes that security should be part of the development process from the beginning?",
-    options: ["Shift Left", "Collaboration", "Automation", "Scalability"],
-    answer: "Shift Left",
-  },
-  // Add more DevSecOps-related questions here
-];
+const quizData = {{ quiz_data|tojson|safe }};
 
 // Personalized messages for the result
 const resultMessages = {
@@ -122,7 +85,7 @@ function displayResult() {
   const resultContainer = document.getElementById("result");
   const scoreMessage = resultMessages[score] || "Congratulations!";
   resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}! ${scoreMessage} Total time taken: ${totalTime} seconds`;
-  resultContainer.classList remove("hidden");
+  resultContainer.classList.remove("hidden");
   document.getElementById("next-button").style.display = "none";
 }
 
