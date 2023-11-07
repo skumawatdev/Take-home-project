@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>Quiz Application</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="quiz-container">
     <h1>Quiz App</h1>
     <div class="question-container">
-      <p class="question-text">{{ quiz_data[0].question }}</p>
+      <p class="question-text">Question will appear here</p>
       <div class="options-container">
         <!-- Options will appear here -->
       </div>
@@ -21,6 +21,6 @@
       <!-- Result will appear here -->
     </div>
   </div>
-  <script src="{{ url_for('static', filename='main.js') }}"></script>
+  <script src="main.js"></script>
 </body>
 </html>
