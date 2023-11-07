@@ -1,26 +1,25 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Define your quiz questions and answers here
-questions = [
-    {"question": "What is the capital of France?", "options": ["London", "Berlin", "Paris"], "correct_option": 2},
-    {"question": "Which planet is known as the Red Planet?", "options": ["Venus", "Mars", "Jupiter"], "correct_option": 1},
-    # Add more questions here
+# Define quiz data
+quiz_data = [
+    {
+        "question": "What is the capital of France?",
+        "options": ["New York", "London", "Paris", "Dublin"],
+        "answer": "Paris",
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "options": ["Vincent Van Gogh", "Pablo Picasso", "Leonardo Da Vinci", "Claude Monet"],
+        "answer": "Leonardo Da Vinci",
+    },
+    # Add more quiz questions here
 ]
 
 @app.route('/')
-def index():
-    return render_template('index.html', questions=questions)
-
-@app.route('/submit', methods=['POST'])
-def submit():
-    score = 0
-    for i, question in enumerate(questions):
-        selected_option = int(request.form.get(f'q{i}'))
-        if selected_option == question['correct_option']:
-            score += 1
-    return render_template('result.html', score=score)
+def quiz():
+    return render_template('index.html', quiz_data=quiz_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
