@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Quiz Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Your Quiz Result</h1>
+    <p>Your score: {{ score }} / {{ questions|length }}</p>
+</body>
+</html>
