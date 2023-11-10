@@ -8,7 +8,7 @@
       
 **Que.3. Create a Pod with the above-created custom image; when a pod dies, Kubernetes should automatically restart.**
       Ans.   
-           https://github.com/skumawatdev/Take-home-project/blob/main/pod.yaml
+           
 
 
 **Que.4.How to access the custom application with a specific port?**
