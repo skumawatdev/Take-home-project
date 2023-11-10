@@ -24,3 +24,8 @@
       service:
         name: nginx
         enabled: yes
+
+# Run this cmd after file.
+# ansible-playbook -i your-ec2-instance-ip-address-or-hostname, -u your-ssh-username -k ansible/nginx-installation.yml
+
+
