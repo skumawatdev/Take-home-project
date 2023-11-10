@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-python-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-python-app
+  template:
+    metadata:
+      labels:
+        app: my-python-app
+    spec:
+      containers:
+      - name: python-app
+        image: sunildocker786/python-quiz:latest
+        ports:
+        - containerPort: 5000
+      	restartPolicy: Always  # This is implicitly set to 'Always' by default
