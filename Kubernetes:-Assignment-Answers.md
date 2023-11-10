@@ -15,6 +15,6 @@
       Ans.  You can expose the application using a Service of type NodePort or LoadBalancer and specify the port in the Service configuration, 
       and it will map to the port in the Pod.
 
-       ![2](https://github.com/skumawatdev/Take-home-project/assets/60931208/cdf7c1e0-a5ad-451c-97ea-b358d519f8cd)
-       ![Capture](https://github.com/skumawatdev/Take-home-project/assets/60931208/3dcd93e7-dee5-499a-b0b4-0da9c0091d05)
+![2](https://github.com/skumawatdev/Take-home-project/assets/60931208/cdf7c1e0-a5ad-451c-97ea-b358d519f8cd)
+ ![Capture](https://github.com/skumawatdev/Take-home-project/assets/60931208/3dcd93e7-dee5-499a-b0b4-0da9c0091d05)
 
