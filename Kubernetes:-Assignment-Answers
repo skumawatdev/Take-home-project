@@ -10,6 +10,7 @@
       Ans.   
 
 
+
 **Que.4.How to access the custom application with a specific port?**
       Ans.  You can expose the application using a Service of type NodePort or LoadBalancer and specify the port in the Service configuration, 
       and it will map to the port in the Pod.
